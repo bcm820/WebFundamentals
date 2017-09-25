@@ -1,9 +1,9 @@
 LEARN THE FOLLOWING TAGS
 
 Events (functions to handle an event)
-    .click() - Bind event handler to “click” JS event, or trigger that event on an element.
-    .on() - Attach an event handler function for one or more events to the selected elements.
-    .hover() - Bind one or two handlers to matched elements, executed via mouseover and off.
+    .click()
+    .on() - Attach event handler function for one or more events to selected elements.
+    .hover() - Bind one or two handlers to matched elements
     .live() - deprecated (JQuery 1.7)
 
 Effects (functions to do some cool animation effects)
@@ -21,7 +21,7 @@ Effects (functions to do some cool animation effects)
 
 CSS (adding or removing a class for any HTML element/DOM)
 
-    .addClass() - Adds the specified CSS class(es) to each element in the set of matched elements.
+    .addClass() - Adds the specified CSS class(es) to each element in a set
     .removeClass() - Remove single, multiple, or all classes in a set of matched elements.
 
     .css() - Get value of a style property for the first element in the set of matched elements
@@ -29,6 +29,8 @@ CSS (adding or removing a class for any HTML element/DOM)
 
 Manipulation (retrieving or setting value or text in any HTML element)
 
+    .data() - Store arbitrary data associated with the matched elements or return the value at the named data store for the first element in the set of matched elements.
+    
     .before() - Insert content by the parameter, before each element in a matched set.
     .after() - Insert content by parameter after each element in a matched set.
 

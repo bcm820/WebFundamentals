@@ -1,6 +1,6 @@
 
 function daysUntilBday(days){
-    while (days > 30 ){
+    while (days > 30){
         console.log(days + " days until my birthday. Such a long time...")
         days = days - 1;
     }
