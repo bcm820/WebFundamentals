@@ -1,0 +1,44 @@
+GIT
+———
+
+git init			Turn current directory into a repository
+git clone <URL>			Clone a Git repository into your directory
+
+git status			Check the status of your repo
+
+git add <file>			Add a file to the staging area to prep for commit
+
+git reset			Remove all files from the staging area
+git reset <file>		Remove a file from the staging area
+git reset <commit> --hard	Reset repo to previous commit state (forever!)
+
+git commit			Write a “commit” (version) to the repo
+git commit -m “Description”	Quickly write a commit to the repo
+
+git log				See the repository’s version log
+git log —-stat			Log lists files changed by a commit
+git log —-graph —-oneline	Visualize all commits on one line each
+
+git diff <commit1> <commit2>	Compare two versions of commits (first 4 chars)
+git diff --staged		Show changes to files added to staging area
+git diff —stat <commit>		Show change stats since a particular commit
+git show <commit>		Show commit changes since the previous commit
+
+git revert -n <commit>		Reverse all changes made by a commmit
+git reset —-hard		Remove files from stage and revert to previous commit
+
+git checkout <commit>		Temporarily revert to a previous commit
+
+git branch <name>		Create a new branch to specify adding a new feature
+git branch -b <name>		Create a new branch and split off from master
+
+git merge <branch>		Merge a branch with your current branchg
+
+git remote add <name> <URL>	Create remote for Github for current repository
+git remote			See current remotes created for Github
+git remote -v			See current remotes, including URLs
+
+git push <remote> <branch>	Push branch to remote on Github
+git pull <remote> <branch>	Pull branch from remote on Github
+git fetch <remote>		Fetch changes made on Github by contributors
+

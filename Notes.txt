@@ -1,0 +1,110 @@
+LEARN THE FOLLOWING TAGS
+
+Events (functions to handle an event)
+    .click() - Bind event handler to “click” JS event, or trigger that event on an element.
+    .on() - Attach an event handler function for one or more events to the selected elements.
+    .hover() - Bind one or two handlers to matched elements, executed via mouseover and off.
+    .live() - deprecated (JQuery 1.7)
+
+Effects (functions to do some cool animation effects)
+
+    .hide() - Hide the matched elements.
+    .show() - Display the matched elements.
+    .toggle() - Display or hide the matched elements.
+
+    .slideDown() - Display the matched elements with a sliding motion.
+    .slideUp() - Hide the matched elements with a sliding motion.
+    .slideToggle() - Display or hide the matched elements with a sliding motion.
+
+    .fadeOut() - Hide the matched elements by fading them to transparent.
+    .fadeIn() - Display the matched elements by fading them to opaque.
+
+CSS (adding or removing a class for any HTML element/DOM)
+
+    .addClass() - Adds the specified CSS class(es) to each element in the set of matched elements.
+    .removeClass() - Remove single, multiple, or all classes in a set of matched elements.
+
+    .css() - Get value of a style property for the first element in the set of matched elements
+        or set one or more CSS properties for every matched element.
+
+Manipulation (retrieving or setting value or text in any HTML element)
+
+    .before() - Insert content by the parameter, before each element in a matched set.
+    .after() - Insert content by parameter after each element in a matched set.
+
+    .val() - Get the current value of the first element in the set of matched elements
+        or set the value of every matched element.
+    .attr() - Get value of an attribute for the first element in the set of matched elements
+        or set one or more attributes for every matched element.
+
+    .html() - Get  HTML contents of first element in the set of matched elements
+        or set the HTML contents of every matched element.
+    .text() - Get the combined text contents of each element in the set of matched elements,
+        including their descendants, or set the text contents of the matched elements.
+
+    .append() - Insert content by parameter to end of each element in a matched set.
+    .prepend() - Insert content by parameter to beginning of each element in a matched set.
+
+        .append() and .html() do nearly the same thing; they both can alter the HTML content of the selected item. The function .append will add markup to the element in question, whereas .html() will overwrite the markup with whatever is run inside the parentheses. So keep in mind that if you want to add content, use .append(), but if you want to replace content, use .html().
+
+        The functions .html() and .text() are different in a key way: .html() can be used to insert new HTML markup, meaning new HTML tags. .text() is used to get or set just the text value of an HTML element.
+
+        For instance, you could use .text() to change the text of a paragraph, but if you want to put an ordered list inside of the paragraph, you need to use .html() to insert the appropriate tags into the paragraph.
+
+
+
+
+
+
+
+JQUERY
+
+To include jQuery library in HTML page:
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+SYNTAX
+
+The $ is how we access the whole jQuery library.
+Next, you can utilize jQuery by adding () to the end of $.
+
+This is how you call a jQuery function:
+
+//  SELECTOR . METHOD ( FUNCTION, ETC. )
+    $(object).event(function(){
+        // more code //
+    });
+
+Example: When object 'body' (of HTML page) is clicked (an event), code will be executed:
+
+    $('body').click(function(){
+        // more code will go here
+    });
+
+The following instructs browser to run jQuery functions when the document itself is ready.
+
+    $(document).ready(function(){
+        // more code will go here
+    });
+
+Otherwise, the code will be live prior to pageload, before your HTML objects are there!
+
+
+BASIC FLOW OF JQUERY:
+
+    1. Select the element, class, or id using the jQuery selector
+    2. Add an event listener: How will this event be triggered?
+    3. Write the code on what you want to happen when the event is triggered.
+
+
+GETTERS & SETTERS
+
+Getter functions get the value of something.
+The following gets the text from somewhere in a page
+
+    var myText = $('#myParagraph').text();  // Sets variable myText with the text of #myParagraph
+    alert(myText);                          // 'Gets' the text of myParagraph in an alert
+
+Setter functions set the value of something.
+
+    $('#myParagraph').text("See how .text() works as a setter!") // Updates the text of myParagraph

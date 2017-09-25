@@ -1,0 +1,100 @@
+<!DOCTYPE html>         <!--Declares document type (HTML5)-->
+<html>
+
+<!--HEAD-->
+<head>
+<meta charset="utf-8">                                          <!--Declares encoding format for browsers-->
+<title>HTML Notes</title>                                       <!--Title-->
+<meta name="description" content="Brian's HTML notes">          <!--Description for search engines-->
+<script src="library.js"></script>                              <!--Links Javascript file-->
+<link rel="stylesheet" href="style.css">                        <!--Links CSS stylesheet-->
+
+</head>
+
+
+<!--BODY-->
+<body>
+<h1>Basic Notes</h1>                                    <!--Headers (h1 - h6)-->
+<p>Summary of notes</p>                                 <!--Paragraphs-->
+<img src="image.png" alt="Alternate to image">          <!--Images-->
+<a href="#">Link text</a>                               <!--Links-->
+<ul><li>Item 1</li></ul>                                <!--Bullet Lists & Item-->
+
+<table>                                                 <!--Tables-->
+<thead>                                                 <!--Head-->
+<th><td> </th></td>
+</thead>
+<tbody>                                                 <!--Body-->
+<tr><td> </tr></td>
+</tbody>
+</table>
+
+</body>
+
+
+<!--FORMS-->
+<form action="database.php" method="post">                                              <!--Connects form to database-->
+
+<label for="text_input">Text Input</label>                                              <!--Text Input (Single Line)-->
+<input type="text" id="text_input" name="text_input">                                   <!--ID is for front-end JS & CSS-->
+                                                                                        <!--NAME is for back-end code (for forms only)-->
+
+<label for="email_input">Email Input</label>                                              <!--Text Input (Single Line)-->
+<input type="email" id="email_input" name="email_input">
+
+<textarea name="textbox_input"></textarea>                                              <!--Textbox Input (Multiple Lines)-->
+
+<label for="password">Password Input</label>                                            <!--Password Input (Concealed)-->
+<input type="password" id="password_input" name="password_input">
+
+<label for="radio1">Radio Option 1</label>                                              <!--Radio Options (only one choice)-->
+<input type="radio" id="radio1" name="radio_options" value="radio1">
+<label for="radio2">Radio Option 2</label>
+<input type="radio" id="radio2" name="radio_options" value="radio2">
+
+<select name="dropdown">                                                                <!--Dropdown Options (only one choice)-->
+        <option value="dropdown1">Option 1</option>
+        <option value="dropdown2">Option 2</option>
+</select>
+        
+<label for="checkbox1">Checkbox Option 1</label>                                        <!--Checkbox Options (multiple choices)-->
+<input type="checkbox" id="checkbox1" name="checkbox_options" value="checkbox1">
+<label for="checkbox2">Checkbox Option 2</label>
+<input type="checkbox" id="checkbox2" name="checkbox_options" value="checkbox2">
+
+<input type="submit" value="Submit">                                                    <!--Submit input to database and end form-->
+</form>
+
+
+<!--FORMS FORMAT #2 (Used by many CSS frameworks such as Twitter Bootstrap)-->
+
+<form>
+
+<label>Name<input type="text" name="name"></label>                                                      <!--Text Input-->
+
+<label>Radio Option 1<input type="radio" name="radio_options" value="radio1"> </label>                  <!--Radio Options-->
+<label>Radio Option 2<input type="radio" name="radio_options" value="radio2"></label>
+
+<label>Checkbox Option 1<input type="checkbox" name="checkbox_options" value="checkbox1"> </label>      <!--Radio Options-->
+<label>Checkbox Option 2<input type="checkbox" name="checkbox_options" value="checkbox2"></label>
+
+<label>Password<input type="password" name="password"></label>                                          <!--Password Input-->
+
+<input type="submit" value="Click here to register">
+</form>
+
+
+<!--Empty canvas with variables for dynamic images designed by code-->
+<canvas id="dynamic_images" width="400" height="200">
+        <p>Your browser does not support canvas</p>     <!--Warning for browsers that don't support HTML5-->
+</canvas>
+
+
+<!--Embedded Audio-->
+<audio src="song.mp3" autoplay loop controls></audio>   <!--Autoplay, loop, and user controls are optional-->
+
+
+<!--Embedded Video-->
+<video src="video.mp4" width="400" height="800" controls></video>
+
+</html>

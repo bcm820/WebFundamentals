@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Practice jQuery Page</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){       // Initializes jQuery upon pageload
+
+                var dojo = ['dojo','bootcamp','etc']
+
+                console.log(dojo)           // Everything without 'event listeners' will occur upon pageload
+                                            // console.log is great for testing things out... logging your vars.
+
+                $('a').click(function(){                        // This is a listener... notice the html tag (a) and the action (click)
+                    alert('You are now leaving the page... or are you?');   // This is the function being called that does an alert pop-up
+                })
+
+                // EFFECTS METHODS
+
+                $('#hide').click(function(){                    // These are effects methods that toggle visibility
+                    $('p').hide();                              // Notice the CSS ID tags (#)
+                })
+                $('#show').click(function(){                    // When .hide and .show are clicked, since they are linked,
+                    $('p').show();                              // all paragraphs will either hide or show when this button is clicked
+                })
+
+                // MANIPULATION METHODS: Change or add text / html to your document
+
+                // Hovering over any h2 will change all h3 text to "Washington DC"
+                // .text reassigns the text value of anything that has text
+                $('h2').hover(function(){
+                    $('h3').text('Washington, D.C.');
+                }, 
+                function(){
+                    $('h3').text('Tysons Corner, V.A.')});
+                // .hover function allows for a second input when your mouse hovers away from the element
+                // It's rare in jQuery to have a function that can allow two input functions
+
+                // .append adds text
+                $('.append').click(function(){
+                    $('.result').append('<h3>This HTML is added by JS!</h3>');
+                })
+
+                // jQuery can also access some of the default CSS properties and modify them
+                // The .css function changes the default property of the element type being acted upon
+                $('button').click(function(){
+                    $('button').css('background-color', 'yellow');
+                })
+                // .css says: "All buttons with the background-color property defined: change!"
+
+            });
+        </script>
+    </head>
+    <body>
+        <div class="result"></div>
+        <p>This is a paragraph!</p>
+        <p>This is also a paragraph!</p>
+        <button id="hide">This will hide all paragraphs!</button>
+        <button id="show">Click to show all paragraphs!</button>
+        <a id="mylink" href="#">Dummy link to demonstrate alert!</a>
+        <h2>Coding Dojo DC</h2>
+        <h3>Tysons Corner, VA</h3>
+        <button class="append">Click to see .append work!</button>
+        <div class="result"></div>
+    </body>
+</html>

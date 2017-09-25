@@ -1,0 +1,43 @@
+.wrapper{
+    background-color: silver;
+    width: 710px; height: 450px;
+    margin: 20px auto; padding: 15px;
+    display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 25% 50% 25%;
+        grid-template-areas:
+            "h h"
+            "n m"
+            ". m";
+}
+
+.head{ grid-area: h;
+    background-color: green;
+    margin-bottom: 15px;
+}
+
+.nav{ grid-area: n;
+    background-color: blue;
+}
+
+.main{ grid-area: m;
+    background-color: red;
+    margin-left: 15px; padding: 10px;
+    display: grid;
+        grid-template-columns: 32% 32% 32% 0;
+        grid-template-rows: 50% 40% 0;
+        grid-template-areas:
+            "a b c ."
+            "d d d ."
+            ". . . ."
+}
+
+    .sub{ background-color: yellow}
+        .a{ grid-area: a; margin-right: 10px; }
+        .b{ grid-area: b; margin-right: 10px; }
+        .c{ grid-area: c }
+
+    .ad{ grid-area: d;
+        background-color: purple;
+        margin-top: 20px;
+    }

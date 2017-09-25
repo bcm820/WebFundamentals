@@ -1,0 +1,23 @@
+#container{
+    display: grid;
+    margin-top: 200px;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: 145px 145px 145px;
+    grid-template-rows: 145px 145px 145px 145px;
+    grid-gap: 2px;
+    grid-template-areas:
+        "test this test"
+        "this test ."
+        "test . ."
+        ". test this";
+}
+
+.test{
+    background-color: gray;
+}
+
+.this{
+    background-color: #BA3232;
+}
+

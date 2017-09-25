@@ -1,0 +1,217 @@
+*{
+	vertical-align: baseline;
+	font-weight: inherit;
+	font-family: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	border: 0 none;
+	outline: 0;
+	padding: 0;
+	margin: 0;
+}
+
+#wrapper{
+    width: 970px;
+    margin: 0px auto;
+}
+
+#top{
+    background-color: #245074;
+    padding: 10px;
+    box-shadow: 2px 2px 2px black;
+}
+
+    #header{
+        height: 110px;
+    }
+
+        #logo{
+            display: inline-block;
+            width: 710px;
+        }
+
+            #logo img{
+                width: 50%;
+                height: 50%;
+            }
+
+        #search{
+            display: inline-block;
+            width: 230px;
+            vertical-align: top;
+            text-align: right;
+            font-family: Helvetica, sans-serif;
+            font-size: 9pt;
+            color: white;
+            line-height: 14pt;
+        }
+
+            #search a{
+                color: #FFD84F;
+            }
+
+            #searchbar{
+                background-color: #444444;
+                padding: 15px;
+                border: 1px #444444;
+                border-radius: 10px;
+                box-shadow: 2px 2px 2px black;
+            }
+
+                #searchbar input[type=text]{
+                    width: 70%;
+                    height: 20px;
+                    padding: 2px;
+                    font-family: Helvetica, sans-serif;
+                    font-size: 8pt;
+                    text-align: center;
+                    color: silver
+                }
+
+                #searchbar input[type=submit]{
+                    font-family: Helvetica, sans-serif;
+                    font-size: 8pt;
+                    text-align: center;
+                    color: white;
+                    background-color: #245074;
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 3px;
+                }
+
+    #main{
+        width: 850px;
+        margin: auto;
+    }
+
+        #navbar{
+            font-family: Helvetica, sans-serif;
+            font-size: 16pt;
+            font-weight: lighter;
+            color: white;
+            background-color: #4A80AB;
+            box-shadow: 2px 2px 2px black;
+            vertical-align: middle;
+            text-align: center;
+            border-radius: 5px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        #navbar a{
+            text-decoration: none;
+            color: white;
+        }
+
+            .navmenu{
+                list-style: none;
+            }
+
+            .navmenu li{
+                display: inline;
+                margin: 18px;
+            }
+
+        #sidebar{
+            display: inline-block;
+            padding: 30px;
+            height: 260px;
+            width: 180px;
+            text-align: center;
+            line-height: 30px;
+            vertical-align: middle;
+        }
+
+            #sidebar a{
+                color: white;
+                font-family: Helvetica, sans-serif;
+                font-weight: lighter;
+                font-size: 12pt;
+            }
+
+            #sidebar li{
+                list-style: none;
+            }
+
+        #description{
+            display: inline-block;
+            vertical-align: top;
+            padding: 20px;
+            width: 560px;
+            text-align: center;
+            font-family: Helvetica, sans-serif;
+            font-size: 9pt;
+            color: white;
+            line-height: 14pt;
+        }
+
+            .quote{
+                padding: 10px;
+                font-family: Helvetica, sans-serif;
+                font-size: 16pt;
+                font-weight: lighter;
+                color: #FFD84F;
+                line-height: 24pt;
+                font-style: italic;
+            }
+
+            h2{
+                font-size: 14pt;
+                line-height: 20pt;
+            }
+
+#middle{
+    padding: 10px;
+    width: 850px;
+    margin: auto;
+}
+
+#middle li{
+    list-style-position: inside;
+}
+
+#middle a{
+    color: skyblue;
+}
+
+    #beginners{
+        display: inline-block;
+        vertical-align: top;
+        padding: 10px;
+        width: 390px;
+        text-align: center;
+        font-family: Helvetica, sans-serif;
+        font-size: 9pt;
+        border-top: 3px solid skyblue;
+    }
+
+    #applications{
+        display: inline-block;
+        vertical-align: top;
+        padding: 10px;
+        width: 390px;
+        text-align: center;
+        font-family: Helvetica, sans-serif;
+        font-size: 9pt;
+        border-top: 3px solid skyblue;
+    }
+
+#footer{
+    background-color: #245074;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+    font-size: 12pt;
+}
+
+    #footer a{
+        color: skyblue;
+        text-decoration: none;
+    }
+
+    #footer p{
+        font-size: 7pt;
+        color: skyblue;
+        line-height: 30pt;
+    }

@@ -1,0 +1,40 @@
+TERMINAL COMMANDS (INCLUDES CUSTOM)
+—————————————————-
+
+ls		List directory contents
+cd ../		Move up in directory
+cd <dir>	Navigate to directory
+cd ~		Navigate to home directory
+
+rm <file>		Delete file
+rm -rf <dir>		Delete a directory with files
+mv _/a.txt b.txt	Move a.txt to current directory and rename to b.txt
+
+touch text.txt	Create an empty text.txt document
+nano text.txt	Open text.txt in Nano (simple file editor)
+
+echo ‘Text’ > text.txt		Write/truncate ‘Text’ into text.txt
+echo ‘Text’ >> text.txt		Adds ‘Text’ as a new line to text.txt
+
+cat text.txt				Prints content of text.txt to terminal
+cat text1.txt text2.txt			Prints content of both files to terminal
+cat txt1.txt txt2.txt > txt3.txt	Truncates content of both files to text.txt
+
+printf ‘Line 1\n line2’ > text.txt	Prints two separate lines to text.txt
+
+diff <filename1> <filename2>	Compare two versions of files
+
+..	Go back 1 directory level
+...	Go back 2 directory levels
+.3	Go back 3 directory levels
+.4	Go back 4 directory levels
+.5	Go back 5 directory levels
+.6	Go back 6 directory levels
+
+c	Clear terminal display
+~	Go to ~ directory
+f	Open directory in Finder
+mcd	Make directory and goto immediately
+zipf	Create zip archive of directory
+cdf	Change directory to open dir in Finder
+lr	Full recursive directory listing

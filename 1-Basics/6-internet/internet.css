@@ -1,0 +1,254 @@
+*{
+	vertical-align: baseline;
+	font-weight: inherit;
+	font-family: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	border: 0 none;
+	outline: 0;
+	padding: 0;
+	margin: 0;
+    }
+    
+#wrapper{
+    width: 920px;
+    margin: auto;
+}
+
+#header{
+    margin: auto;
+    vertical-align: middle;
+}
+
+    #header img{
+        position: absolute;
+        width: 100px;
+        height: 100px;
+    }
+
+    h1{
+        display: inline-block;
+        font-family: Helvetica, sans-serif;
+        font-size: 24pt;
+        padding: 40px 0px 5px 100px;
+    }
+
+        .blue{
+            color: #2B699E;
+        }
+
+    h2{
+        display: block;
+        width: 900px;
+        padding: 10px;
+        font-family: Helvetica, sans-serif;
+        font-size: 18pt;
+        color: white;
+        background: linear-gradient(#2B699E, #5384AB,#2B699E)
+    }
+
+#sidebar{
+    display: inline-block;
+    vertical-align: top;
+    margin: 15px;
+    width: 200px;
+}
+
+    h5{
+        font-family: Helvetica, sans-serif;
+        font-size: 12pt;
+        font-weight: bold;
+        padding: 10px 0px 10px 0px;
+    }
+
+    .red{
+        color: red;
+    }
+
+    p{
+        font-family: Helvetica, sans-serif;
+        font-size: 10pt;
+    }
+
+    .bold{
+        font-weight: bold;
+    }
+
+    #buttons{
+        padding: 15px 3px 15px 3px;
+        border-bottom: 1px solid silver;
+    }
+
+        button{
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-family: Helvetica, sans-serif;
+            font-size: 10pt;
+            color: white;
+            margin-top: 3px;
+            margin-bottom: 3px;
+            padding: 7px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        a{
+            text-decoration: none;
+            color: white;
+        }
+
+        #button-blue{
+            background: linear-gradient(#6096BF, #2B6A9F);
+            box-shadow: 1px 1px 1px gray;
+        }
+
+        #button-orange{
+            background: linear-gradient(#EAA957, #EE7809);
+            box-shadow: 1px 1px 1px gray;
+        }
+    
+    #dojo-ad{
+        display: inline-block;
+        height: 290px;
+        width: 175px;
+        margin-top: 20px;
+        padding: 10px;
+        background-image: url("ad_background.png");
+        box-shadow: 1px 1px 1px gray;
+    }
+
+        h3{
+            display: inline-block;
+            font-family: Helvetica, sans-serif;
+            font-weight: lighter;
+            font-size: 16pt;
+            padding: 10px 0px 0px 0px;
+            text-align: center;
+            color: white;
+        }
+
+        #dojo-ad img{
+            width: 100px;
+            margin: auto;
+            padding: 0px 10px 10px 35px;
+        }
+
+        #button-lightblue{
+            background: linear-gradient(#5DCCDD, #13C3DE);
+            box-shadow: 1px 1px 1px black;
+        }
+
+        #shade{
+            font-size: 8pt;
+            background: linear-gradient(to right, #FFFFFF , #2B699E); 
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+#content{
+    display: inline-block;
+    width: 670px;
+    margin: 10px 0px 10px 10px;
+}
+
+#content-head{
+    height: 65px;
+    vertical-align: top;
+    border-bottom: 1px solid silver;
+}
+
+    .home{
+        width: 20px;
+        height: 20px;
+    }
+
+    #contact{
+        float: right;
+        vertical-align: top;
+    }
+
+        #contact img{
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            margin-top: 5px;
+            margin-right: 10px;
+        }
+
+        #contact-text{
+            display: inline-block;
+            float: right;
+        }
+        
+        .small{
+            display: inline;
+            font-size: 7pt;
+            margin: 0px;
+        }
+
+        .dial{
+            display: inline;
+            font-family: Helvetica, sans-serif;
+            font-size: 14pt;
+            font-weight: bold;
+            color: #00C0DD;
+        }
+
+#content-main{
+    display: inline-block;
+    margin: 10px;
+    vertical-align: top;
+    width: 660px;
+}
+
+    h4{
+        font-family: Helvetica, sans-serif;
+        font-size: 12pt;
+        font-weight: bold;
+        color: #2B699E;
+    }
+    
+    #content-main img{
+        display: block;
+        width: 300px;
+        margin: 15px auto;
+    }
+
+    #content-main p{
+        font-family: Helvetica, sans-serif;
+        font-size: 10pt;
+        padding: 3px 0px 3px 0px;
+    }
+
+    #content-main a{
+        color: #00C0DD
+    }
+
+    ul,ol,li{
+        font-family: Helvetica, sans-serif;
+        font-size: 10pt;
+        padding: 3px 0px 3px 0px;
+        margin-left: 20px;
+    }
+
+#banner{
+    display: inline-block;
+    vertical-align: top;
+    width: 640px;
+    padding: 10px;
+    border: 5px solid #0087DD;
+    box-shadow: 1px 1px 1px gray;
+}
+
+    #banner p{
+        font-family: Helvetica, sans-serif;
+        font-size: 10pt;
+        padding: 5px 0px 5px 0px;
+    }
+
+    #banner img{
+        float: left;
+        width: 120px;
+        margin: 0px 20px 0px 0px;
+    }

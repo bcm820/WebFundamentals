@@ -1,0 +1,30 @@
+COMMON SELECTORS
+Elements within a specific HTML tag (e.g. p, h1) 
+Elements specified by id (#id in CSS), used only once on a page 
+Elements specified by class (.class in CSS), used multiple times in a page 
+
+COMMON STYLE PROPERTIES 
+width, height        Size of your elements 
+overflow             Hide contents that exceed container, enlarge container, or add scroll bar 
+background           Color, image, image position, image size, repeat 
+border               Thickness, type, color, etc for top, right, bottom, left; also radius 
+display              Block, inline, inline-block, none 
+
+TEXT STYLE PROPERTIES 
+color                Expressed using hex, RGB, or semantic code (e.g. blue)
+text-align           Center, left, right, justified 
+text-decoration      underline, overline, line-through 
+font-family          Possible fonts to use (list multiple for clients unable to support main) 
+font-size            Identified as pt, px, em, or % 
+font-style           Italic 
+font-weight          Bold 
+
+BLOCK VS INLINE ELEMENTS 
+Block: Take up 100% width (used for web layouts)         <body>, <div>, <form>, <h1>-<h6>, <p>, <table>, <ul>, <ol>, <li> 
+Inline: Take up only as much space as needed             <a>, <img>, <span>, <input>, <label>, <select>, <textarea> 
+
+BOX MODEL PROPERTIES 
+padding              Inside block elements       e.g. 25px, 50px, 75px, 100px (top, right, bottom, left)
+margin               Outside of block elements   Note: Vertical margins of blocks do not stack -- only one is honored
+border
+border-radius        Round edges

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Registration Form</title>
+        <meta name="description" content="Registration Form">
+    </head>
+    <body>
+        <h1>My Registration Form</h1>
+        <form action="db.php" method="post">
+            <table>
+                <tr>
+                    <td><label for="first_name">First Name</label></td>
+                    <td><input type="text" id="first_name" name="first_name"></td>
+                </tr>
+                <tr>
+                    <td><label for="last_name">First Name</label></td>
+                    <td><input type="text" id="last_name" name="last_name"></td>
+                </tr>
+                <tr>
+                    <td><label for="email">First Name</label></td>
+                    <td><input type="email" id="email" name="email"></td>
+                </tr>
+                <tr>
+                    <td><label for="password1">Password</label></td>
+                    <td><input type="password" id="password1" name="password1"></td>
+                </tr>
+                <tr>
+                    <td><label for="password2">PW Confirm</label></td>
+                    <td><input type="password" id="password2" name="password2"></td>
+                </tr>
+                <tr>
+                    <td><label for="birthday">Birthday</label></td>
+                    <td><input type="date" id="birthday" name="birthday"></td>
+                </tr>
+                <tr><td colspan="2">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label>
+                </td></tr>
+                <tr><td colspan="2">
+                    A short description about yourself:<br>
+                    <textarea name="bio" rows="4" cols="40"></textarea>
+                </td></tr>
+                <tr><td colspan="2">
+                    <select name="language">
+                        <option value="javascript">Javascript</option>
+                        <option value="python">Python</option>
+                        <option value="java">Java</option>
+                        <option value="c++">C++</option>
+                        <option value="net">.NET</option>
+                    </select>
+                </td></tr>
+                <tr><td colspan="2">
+                    <input type="submit" value="Submit">
+                </td></tr>
+            </table>
+        </form>
+    </body>
+</html>
