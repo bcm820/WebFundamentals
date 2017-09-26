@@ -1,7 +1,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Introudiction to jQuery</title>
+    <title>Introduction to jQuery</title>
     <link rel="stylesheet" href="0-basics.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -13,39 +13,39 @@
         $("body").ready(function(){ $("#p-slideDown").hide() });
         $("body").ready(function(){ $("#p-fadeIn").hide() });
         $("body").data("location", { bootcamp: "Coding Dojo" }); // This is stored data to be retrieved later
+        
+        // EFFECTS METHODS
+        // event id   listener          affected id  effect
+        $("#c-hide").click(function(){ $("#p-hide").hide() })
+        $("#c-show").click(function(){ $("#p-show").show() })
+        $("#c-toggle").click(function(){ $("#p-toggle").toggle() })
+        $("#c-slideDown").click(function(){ $("#p-slideDown").slideDown() })
+        $("#c-slideUp").click(function(){ $("#p-slideUp").slideUp() })
+        $("#c-slideToggle").click(function(){ $("#p-slideToggle").slideToggle() })
+        $("#c-fadeIn").click(function(){ $("#p-fadeIn").fadeIn() })
+        $("#c-fadeOut").click(function(){ $("#p-fadeOut").fadeOut() })
 
-            // EFFECTS METHODS
-            // event id   listener          affected id  effect
-            $("#c-hide").click(function(){ $("#p-hide").hide() })
-            $("#c-show").click(function(){ $("#p-show").show() })
-            $("#c-toggle").click(function(){ $("#p-toggle").toggle() })
-            $("#c-slideDown").click(function(){ $("#p-slideDown").slideDown() })
-            $("#c-slideUp").click(function(){ $("#p-slideUp").slideUp() })
-            $("#c-slideToggle").click(function(){ $("#p-slideToggle").slideToggle() })
-            $("#c-fadeIn").click(function(){ $("#p-fadeIn").fadeIn() })
-            $("#c-fadeOut").click(function(){ $("#p-fadeOut").fadeOut() })
+        // CSS METHOD
+        $("#c-addClass").click(function(){ $("#p-addClass").addClass("addClass") })
 
-            // CSS METHOD
-            $("#c-addClass").click(function(){ $("#p-addClass").addClass("addClass") })
-
-            // MANIPULATION METHODS
-            $("#c-before").click(function(){ $("#p-before").before("<p>This paragraph was added by jQuery! (click again)</p>") })
-            $("#c-after").click(function(){ $("#p-after").after("<p>This paragraph was also added by jQuery! (click again)</p>") })
-            $("#c-append").click(function(){ $("#p-append").append("use the .append function (but watch the formatting)! (and click again)") })
-            $("#c-html").click(function(){ $("#p-html").html("<p>This paragraph has entirely replaced the previous one.</p>") })
-            $("#c-text").click(function(){ $("#p-text").text("This is the updated text value of the previous paragraph. No markup needed.") })
+                // HOVER METHOD!
+            $(".click").hover(function(){
+                $(this).css("background", "linear-gradient(#800000 30%,#CCCCCC)");
+                }, function(){
+                $(this).css("background", "linear-gradient(#999999 30%,#CCCCCC)");
+            });
+        
+        // MANIPULATION METHODS
+        $("#c-before").click(function(){ $("#p-before").before("<p>This paragraph was added by jQuery! (click again)</p>") })
+        $("#c-after").click(function(){ $("#p-after").after("<p>This paragraph was also added by jQuery! (click again)</p>") })
+        $("#c-append").click(function(){ $("#p-append").append("use the .append function (but watch the formatting)! (and click again)") })
+        $("#c-html").click(function(){ $("#p-html").html("<p>This paragraph has entirely replaced the previous one.</p>") })
+        $("#c-text").click(function(){ $("#p-text").text("This is the updated text value of the previous paragraph. No markup needed.") })
 
                 // These are tricky. You can set shortcut variables for the values/attributes you want to append.
                 $("#c-data").click(function(){ $("#p-data").append( $("body").data("location").bootcamp ) })
                 $("#c-val").click(function(){ $("#p-val").append($("#i-val").val()) })
                 $("#c-attr").click(function(){ $("#p-attr").append($("#p-attr").attr("id")) })
-
-
-
-            // MANIPULATION METHODS: Change or add text / html to your document
-            // Hovering over any h2 will change all h3 text to "Washington DC"
-            // .text reassigns the text value of anything that has text
-            $('h2').hover(function(){ $('h3').text('Washington, D.C.') }, function() { $('h3').text('Tysons Corner, V.A.') });
 
         });
     </script>
