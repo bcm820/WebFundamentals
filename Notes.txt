@@ -1,5 +1,13 @@
 LEARN THE FOLLOWING TAGS
 
+
+// HOVER METHOD!
+$(".click").hover(function(){
+    $(this).css("background", "linear-gradient(#800000 30%,#CCCCCC)");
+    }, function(){
+    $(this).css("background", "linear-gradient(#999999 30%,#CCCCCC)");
+});
+
 Events (functions to handle an event)
     .click()
     .on() - Attach event handler function for one or more events to selected elements.
@@ -110,12 +118,3 @@ The following gets the text from somewhere in a page
 Setter functions set the value of something.
 
     $('#myParagraph').text("See how .text() works as a setter!") // Updates the text of myParagraph
-
-
-
-
-// Hovering over any h2 will change all h3 text to "Washington DC"
-// .text reassigns the text value of anything that has text
-$('h2').hover(function(){
-    $('h3').text('Washington, D.C.')
-    }, function() { $('h3').text('Tysons Corner, V.A.') });

@@ -1,0 +1,37 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Hatake Kakashi</title>
+    <link rel="stylesheet" href="ninja.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            
+            $("body").ready(function(){
+                $(".vanish").hide()});
+
+            $("#poof").click(function(){
+                $(".vanish").slideDown()});
+
+            $(".vanish").click(function(){
+                $(this).slideUp()});
+
+        });
+    </script>
+</head>
+<body>
+
+<div id="wrapper">
+    <div id="ninja1"><img src="1-kakashi.jpg" alt="Kakashi" class="vanish"></div>
+    <div id="ninja2"><img src="1-kakashi.jpg" alt="Kakashi" class="vanish"></div>
+    <div id="ninja3"><img src="1-kakashi.jpg" alt="Kakashi" class="vanish"></div>
+    <div id="ninja4"><img src="1-kakashi.jpg" alt="Kakashi" class="vanish"></div>
+    <div id="ninja5"><img src="1-kakashi.jpg" alt="Kakashi" class="vanish"></div>
+    <div id="ninja6"><img src="1-kakashi.jpg" alt="Kakashi" class="vanish"></div>
+    <div id="ninja7"><img src="1-kakashi.jpg" alt="Kakashi" class="vanish"></div>
+    <div id="ninja8"><img src="1-kakashi.jpg" alt="Kakashi" class="vanish"></div>
+    <div id="summon"><img src="1-anbu.jpg" id="poof" alt="ANBU symbol"></div>
+</div>
+
+</body>
+</html>

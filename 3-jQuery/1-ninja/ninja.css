@@ -1,0 +1,27 @@
+
+#wrapper{
+    width: 450px;
+    height: 800px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 200px 200px 200px ;
+    grid-template-areas:
+        "ninja1 ninja2 ninja3"
+        "ninja4 summon ninja5"
+        "ninja6 ninja7 ninja8"
+}
+
+#ninja1 { grid-area: ninja1 }
+#ninja2 { grid-area: ninja2 }
+#ninja3 { grid-area: ninja3 }
+#ninja4 { grid-area: ninja4 }
+#ninja5 { grid-area: ninja5 }
+#ninja6 { grid-area: ninja6 }
+#ninja7 { grid-area: ninja7 }
+#ninja8 { grid-area: ninja8 }
+#summon { grid-area: summon }
+.vanish{ cursor: pointer }
+#poof{
+    cursor: pointer;
+    margin: 30px;
+}
