@@ -14,11 +14,24 @@
             $('form').submit(function(){    // .submit used as a listener
                 return false;
             });
+
+            // var first_name = $('input[name=first_name]').val()
+            // var last_name = $('input[name=last_name]').val()
+            // var email = $('input[name=email]').val()
+            // var phone = $('input[name=phone]').val()
+
+            // <tr>
+            //     <td>${first_name}</td>
+            //     <td>${last_name}</td>
+            //     <td>${email}</td>
+            //     <td>${phone}</td>
+            // </tr>
             
             $('button').click(function(){
                 $('#thankyou').fadeIn();      // thanks user for submitting info
                 console.log($('form').serialize())  // sends machine data to console
                 
+                // Note use of INTERPOLATION to input variables
                 $('#user-list').append(
                     '<tr><td>' + $('input[name="first_name"]').val() + '</td><td>'
 						+ $('input[name="last_name"]').val() + '</td><td>'

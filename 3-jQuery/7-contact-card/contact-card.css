@@ -24,45 +24,28 @@ h1{
 }
 
 h2{
-    font-size:18px;
-    font-weight: lighter;
+    font-size: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
-    text-align: center;
 }
 
 p{
-    margin: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 #wrapper{
     background-color: #EEEEEE;
     width: 600px;
-    margin: 100px auto;
+    margin: 20px auto;
     padding: 10px;
 }
 
-#table{
+#member-form{
     background-color: #CCCCCC;
-    padding: 10px;
-}
-
-th{
-    font-weight: bold;
-    width: 200px;
-    text-align: left;
-    vertical-align: middle;
-}
-
-tr{
-    height: 15px;
-}
-
-#add-users{
-    background-color: #CCCCCC;
-    padding: 10px auto;
+    padding: 20px auto;
     display: grid;
-    grid-template-columns: 18% 32% 50%;
+    grid-template-columns: 15% 35% 50%;
     grid-template-areas: "labels fields submission";
 }
 
@@ -71,7 +54,8 @@ tr{
         vertical-align: top;
         display: inline-block;
         position: relative;
-        padding: 5px;
+        padding-left: 10px;
+        padding-top: 5px;
     }
 
         label{
@@ -97,6 +81,13 @@ tr{
             width: 90%;
         }
 
+        textarea{
+            padding: 5px;
+            font-size: 9pt;
+            width: 87%;
+            resize: none;
+        }
+
     #submission{
         grid-area: submission;
         vertical-align: top;
@@ -105,6 +96,12 @@ tr{
         padding: 5px;
     }
 
+        .logo{
+            margin-top: 20px;
+            margin-left: 10px;
+            width: 250px;
+        }
+    
         .click{
             display: block;
             width: 70px;
@@ -125,3 +122,31 @@ tr{
             -ms-user-select: none; /* IE10+/Edge */
             user-select: none; /* Standard */
         }
+
+#cards{
+    width: 1000px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+    .card{
+        display: inline-block;
+        position: relative;
+        vertical-align: top;
+        background-color: #EEEEEE;
+        width: 240px;
+        margin: 20px;
+        padding: 10px;
+        border: 1px solid #CCCCCC;
+        box-shadow: 1px 1px 1px #555555;
+    }
+
+    .avatar{
+        margin: 10px;
+        width: 225px;
+    }
+
+    h3{
+        font-size: 8pt;
+        text-align: center;
+    }
