@@ -1,16 +1,60 @@
-LEARN THE FOLLOWING TAGS
+CALLBACKS!!!!
+------------
+I want to remove/reset all added elements on the page by clicking it. To do so, I will run callbacks. Callbacks let me attach handlers to dynamic HTML.
+
+Earlier on in my page, prior to $(document).ready, create a new function with the selector targeting my event handler.
+When this new function is called, it will both create the new dynamic content and it will attach the handler to it.
+
+function attach(){
+    $('listener').event(function(){
+        $(target).effect();
+    });
+}
+
+Later on, after content is created, you can add this function into the same script section when you are executing jquery functions.
+
+
+
+
+
+
+
+USING ON() FOR EVENT HANDLING
+.on() continually listens for your specified event to take place...
+
+The really neat thing about .on() is that every time the event happens in the corresponding target, the relevant parts of the document get scanned in real time. Thus, any new element added after page load will be detected and the code will run. Pretty great, huh?
+
+NOTE: The more searching of the document the .on() function has to do, the slower your code will run. Selecting $(document) for everything in an average website won't slow down your performance at all, but if you have tens of thousands of dynamic HTML elements that you are trying to add handlers to, using a more specific selector can make a huge difference between your website crashing or working.
+
+
+listener     event    target   function to run
+$(div.a).on('click', 'button', function(){alert('you clicked a button!')});
+(div with class="a")(inside div)
+
+The .on() function takes up to 4 parameters and we will show you how they mesh with our example above:
+
+The event: Are you waiting for a click? A submit? Keydown? In this case, we are looking for a click.
+(Data you wish to pass to the handler. this is not required and seldom used. We're not using it here!)
+The target: i.e. the element you are trying to target. Here we are targeting a button. So now our search is narrowed down listening for a button to be clicked.
+
+The function you want to run: Just the stuff you want to attach! In our case, we are just going to alert to the screen that we clicked a button-- every time a button is clicked.
+
+Every time the event you specified in the first item (1) happens, the function searches the document for the target(s) you specified in the third item (3). If the action was triggered by the correct element, the code you put in the fourth item (along with any information you passed from the optional second item) will be executed.
+
 
 
 // HOVER METHOD!
-$(".click").hover(function(){
-    $(this).css("background", "linear-gradient(#800000 30%,#CCCCCC)");
-    }, function(){
-    $(this).css("background", "linear-gradient(#999999 30%,#CCCCCC)");
-});
+$(".click").hover(
+    function(){
+        $(this).css("background", "linear-gradient(#800000 30%,#CCCCCC)");
+    },
+    function(){
+        $(this).css("background", "linear-gradient(#999999 30%,#CCCCCC)");
+    });
 
 Events (functions to handle an event)
     .click()
-    .on() - Attach event handler function for one or more events to selected elements.
+    .on() - Attach event handler for events to elements, after page load
     .hover() - Bind one or two handlers to matched elements
     .live() - deprecated (JQuery 1.7)
 

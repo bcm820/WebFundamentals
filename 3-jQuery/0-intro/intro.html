@@ -1,101 +1,127 @@
+<!DOCTYPE html>
 <html>
-<head>
+    <head>
     <meta charset="utf-8">
     <title>Introduction to jQuery</title>
     <link rel="stylesheet" href="intro.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
-        $(document).ready(function(){
-        
-        // HIDDEN ELEMENTS UPON PAGELOAD
-        $("body").ready(function(){ $("#p-show").hide() });
-        $("body").ready(function(){ $("#p-slideDown").hide() });
-        $("body").ready(function(){ $("#p-fadeIn").hide() });
-        $("body").data("location", { bootcamp: "Coding Dojo" }); // This is stored data to be retrieved later
-        
-        // EFFECTS METHODS
-        // event id   listener          affected id  effect
-        $("#c-hide").click(function(){ $("#p-hide").hide() })
-        $("#c-show").click(function(){ $("#p-show").show() })
-        $("#c-toggle").click(function(){ $("#p-toggle").toggle() })
-        $("#c-slideDown").click(function(){ $("#p-slideDown").slideDown() })
-        $("#c-slideUp").click(function(){ $("#p-slideUp").slideUp() })
-        $("#c-slideToggle").click(function(){ $("#p-slideToggle").slideToggle() })
-        $("#c-fadeIn").click(function(){ $("#p-fadeIn").fadeIn() })
-        $("#c-fadeOut").click(function(){ $("#p-fadeOut").fadeOut() })
 
-        // CSS METHOD
-        $("#c-addClass").click(function(){ $("#p-addClass").addClass("addClass") })
+// CALLBACKS DEFINED // NOTE: This is done outside of $(document).ready()
+function attachFadeOut(){   $('.callback').click(function(){ $(this).fadeOut()}) }
 
-            // HOVER METHOD!
-            $(".click").hover(function(){
-                $(this).css("background", "linear-gradient(#800000 30%,#CCCCCC)");
-                }, function(){
-                $(this).css("background", "linear-gradient(#999999 30%,#CCCCCC)");
-            });
-        
-        // MANIPULATION METHODS
-        $("#c-before").click(function(){ $("#p-before").before("<p>This paragraph was added by jQuery! (click again)</p>") })
-        $("#c-after").click(function(){ $("#p-after").after("<p>This paragraph was also added by jQuery! (click again)</p>") })
-        $("#c-append").click(function(){ $("#p-append").append("use the .append function (but watch the formatting)! (and click again)") })
-        $("#c-html").click(function(){ $("#p-html").html("<p>This paragraph has entirely replaced the previous one.</p>") })
-        $("#c-text").click(function(){ $("#p-text").text("This is the updated text value of the previous paragraph. No markup needed.") })
+// UPON PAGELOAD...
+$(document).ready(function(){
+    
+    // HIDDEN ELEMENTS UPON PAGELOAD
+    $("body").ready(function(){           $("#p-show").hide() } );
+    $("body").ready(function(){           $("#p-slideDown").hide() } );
+    $("body").ready(function(){           $("#p-fadeIn").hide() } );
 
-                // These are tricky. You can set shortcut variables for the values/attributes you want to append.
-                $("#c-data").click(function(){ $("#p-data").append( $("body").data("location").bootcamp ) })
-                $("#c-val").click(function(){ $("#p-val").append($("#i-val").val()) })
-                $("#c-attr").click(function(){ $("#p-attr").append($("#p-attr").attr("id")) })
+    // STORED DATA
+    $("body").data("location", { bootcamp: "Coding Dojo" } );
 
-        });
+    // EFFECTS METHODS
+    $("#c-hide").click(function(){        $("#p-hide").hide() } );
+    $("#c-show").click(function(){        $("#p-show").show() } );
+    $("#c-toggle").click(function(){      $("#p-toggle").toggle() } );
+    $("#c-slideDown").click(function(){   $("#p-slideDown").slideDown() } );
+    $("#c-slideUp").click(function(){     $("#p-slideUp").slideUp() } );
+    $("#c-slideToggle").click(function(){ $("#p-slideToggle").slideToggle() } );
+    $("#c-fadeIn").click(function(){      $("#p-fadeIn").fadeIn() } );
+    $("#c-fadeOut").click(function(){     $("#p-fadeOut").fadeOut() } );
+
+    // CSS METHOD
+    $("#c-addClass").click(function(){    $("#p-addClass").addClass("addClass") } );
+
+    // HOVER METHOD & CSS MANIPULATION
+    $(".click").hover(function(){   $(this).css("background", "linear-gradient(#800000 30%,#CCCCCC)") },
+                      function(){   $(this).css("background", "linear-gradient(#999999 30%,#CCCCCC)") } );
+
+    // MANIPULATION METHODS: Various methods to add dynamic content to the page
+    $("#c-before").click(function(){
+        $("#p-before").before("<p class='callback'>Paragraph(s) added by jQuery! (click me)</p>");
+            attachFadeOut() } );  // CALLBACKS
+    $("#c-after").click(function(){
+        $("#p-after").after("<p class='callback'>Paragraph(s) also added by jQuery! (click me)</p>");
+            attachFadeOut() } );  // CALLBACKS
+    $("#c-append").click(function(){
+        $("#p-append").append(" use .append function as much as you want! (click me)");
+            attachFadeOut() } );  // CALLBACKS
+    $("#c-html").click(function(){
+        $("#p-html").html("<p class='callback'>HTML tags and content within is replaced. (click me)</p>");
+            attachFadeOut() } );  // CALLBACKS
+    $("#c-text").click(function(){
+        $("#p-text").text("This is the paragraphs updated text value. No markup. (click me)");
+            attachFadeOut() } );  // CALLBACKS
+
+        // These are tricky. You can set shortcut variables for the values/attributes you want to append.
+        $("#c-data").click(function(){    $("#p-data").append( $("body").data("location").bootcamp );
+            attachFadeOut() } );  // CALLBACKS
+        $("#c-val").click(function(){     $("#p-val").append( $("#i-val").val());
+            attachFadeOut() } );  // CALLBACKS
+        $("#c-attr").click(function(){    $("#p-attr").append( $("#p-attr").attr("id"));
+            attachFadeOut() } );  // CALLBACKS
+    
+});
+
     </script>
-</head>
+    </head>
 <body>
+    <div id="wrapper">
+        <h1>jQuery Functions</h1>
 
-<div id="wrapper">
-    <h1>jQuery Functions</h1>
-    <div id="grid">
+        <div id="grid">
 
-        <div id="l-header" class="listener"><h2>Listeners</h2></div>
-        <div id="l-hide" class="listener"><a id="c-hide" class="click">.hide</a></div>
-        <div id="l-show" class="listener"><a id="c-show" class="click">.show</a></div>
-        <div id="l-toggle" class="listener"><a id="c-toggle" class="click">.toggle</a></div>
-        <div id="l-slideDown" class="listener"><a id="c-slideDown" class="click">.slideDown</a></div>
-        <div id="l-slideUp" class="listener"><a id="c-slideUp" class="click">.slideUp</a></div>
-        <div id="l-slideToggle" class="listener"><a id="c-slideToggle" class="click">.slideToggle</a></div>
-        <div id="l-fadeIn" class="listener"><a id="c-fadeIn" class="click">.fadeIn</a></div>
-        <div id="l-fadeOut" class="listener"><a id="c-fadeOut" class="click">.fadeOut</a></div>
-        <div id="l-addClass" class="listener"><a id="c-addClass" class="click">.addClass</a></div>
-        <div id="l-before" class="listener"><a id="c-before" class="click">.before</a></div>
-        <div id="l-after" class="listener"><a id="c-after" class="click">.after</a></div>
-        <div id="l-append" class="listener"><a id="c-append" class="click">.append</a></div>
-        <div id="l-html" class="listener"><a id="c-html" class="click">.html</a></div>
-        <div id="l-attr" class="listener"><a id="c-attr" class="click">.attr</a></div>
-        <div id="l-val" class="listener"><a id="c-val" class="click">.val</a></div>
-        <div id="l-text" class="listener"><a id="c-text" class="click">.text</a></div>
-        <div id="l-data" class="listener"><a id="c-data" class="click">.data</a></div>
+            <!-- LISTENERS -->  <div id="l-header" class="listener"><h2>Listeners</h2></div>
 
-        <div id="e-header" class="element"><h2>Elements</h2></div>
-        <div id="e-hide" class="element"><p id="p-hide">Click .hide to make this paragraph go away.</p></div>
-        <div id="e-show" class="element"><p>Click .show to make a hidden paragraph appear.</p><p id="p-show">I magically appear. I was hidden at pageload.</p></div>
-        <div id="e-toggle" class="element"><p id="p-toggle">I'll probably use this more, though.<br>I come and go as you please! (click again)</p></div>
-        <div id="e-slideDown" class="element"><p>Click .slideDown to pull down the next paragraph.</p><p id="p-slideDown">It's kinda like pulling down the blinds.</p></div>
-        <div id="e-slideUp" class="element"><p id="p-slideUp">And this is kinda like rolling up the blinds.</p></div>
-        <div id="e-slideToggle" class="element"><p id="p-slideToggle">Again, this works much better.<br>I can slide down <i>and</i> up! (click again)</p></div>
-        <div id="e-fadeIn" class="element"><p>Click .fadeIn and see how the next paragraph appears!</p><p id="p-fadeIn">I'm much nicer than <i>.show</i> in my opinion.</p></div>
-        <div id="e-fadeOut" class="element"><p id="p-fadeOut">And I fade out like a ghost... spooky.</p></div>
-        <div id="e-addClass" class="element"><p id="p-addClass">Transform me with CSS!!!</p></div>
-        <div id="e-before" class="element"><p id="p-before">You can add content before me.</p></div>
-        <div id="e-after" class="element"><p id="p-after">You can add content after me.</p></div>
-        <div id="e-append" class="element"><p id="p-append">But what if you actually want to add text or even HTML markup <i>in</i> this paragraph?</p></div>
-        <div id="e-html" class="element"><p id="p-html">And if you want to completely <i>replace</i> an element's HTML markup, use the .html function.</p></div>
-        <div id="e-attr" class="element"><p>.attr allows you to view the value of an element's attribute. This paragraph's id will be appended below (click again):</p><p id="p-attr">Paragraph ID: </p></div>
-        <div id="e-val" class="element"><p>.val allows you to get values of form elements.<br>Input text and click .val to see its value below: </p><textarea id="i-val" rows="3" cols="30"></textarea><p id="p-val"></p></div>
-        <div id="e-text" class="element"><p id="p-text">.text is used to set (e.g. update) a new text value for a matched element.</p></div>
-        <div id="e-data" class="element"><p>.data allows you to call data stored with associated elements. Click to see data stored in the 'body' tag:</p><p id="p-data"></p></div>
+            <!-- EFFECTS -->
+            <div id="l-hide" class="listener"><a id="c-hide" class="click">.hide</a></div>
+            <div id="l-show" class="listener"><a id="c-show" class="click">.show</a></div>
+            <div id="l-toggle" class="listener"><a id="c-toggle" class="click">.toggle</a></div>
+            <div id="l-slideDown" class="listener"><a id="c-slideDown" class="click">.slideDown</a></div>
+            <div id="l-slideUp" class="listener"><a id="c-slideUp" class="click">.slideUp</a></div>
+            <div id="l-slideToggle" class="listener"><a id="c-slideToggle" class="click">.slideToggle</a></div>
+            <div id="l-fadeIn" class="listener"><a id="c-fadeIn" class="click">.fadeIn</a></div>
+            <div id="l-fadeOut" class="listener"><a id="c-fadeOut" class="click">.fadeOut</a></div>
+            <div id="l-addClass" class="listener"><a id="c-addClass" class="click">.addClass</a></div>
 
+            <!-- MANIPULATION -->
+            <div id="l-before" class="listener"><a id="c-before" class="click">.before</a></div>
+            <div id="l-after" class="listener"><a id="c-after" class="click">.after</a></div>
+            <div id="l-append" class="listener"><a id="c-append" class="click">.append</a></div>
+            <div id="l-html" class="listener"><a id="c-html" class="click">.html</a></div>
+            <div id="l-text" class="listener"><a id="c-text" class="click">.text</a></div>
+            <div id="l-data" class="listener"><a id="c-data" class="click">.data</a></div>
+            <div id="l-val" class="listener"><a id="c-val" class="click">.val</a></div>
+            <div id="l-attr" class="listener"><a id="c-attr" class="click">.attr</a></div>
+
+
+            <!-- ELEMENTS -->  <div id="e-header" class="element"><h2>Elements</h2></div>
+            
+            <!-- EFFECTS -->
+            <div id="e-hide" class="element"><p id="p-hide">Click .hide to make this paragraph go away.</p></div>
+            <div id="e-show" class="element"><p>Click .show to make a hidden paragraph appear.</p><p id="p-show">I magically appear. I was hidden at pageload.</p></div>
+            <div id="e-toggle" class="element"><p id="p-toggle">I'll probably use this more, though.<br>I come and go as you please! (click again)</p></div>
+            <div id="e-slideDown" class="element"><p>Click .slideDown to pull down the next paragraph.</p><p id="p-slideDown">It's kinda like pulling down the blinds.</p></div>
+            <div id="e-slideUp" class="element"><p id="p-slideUp">And this is kinda like rolling up the blinds.</p></div>
+            <div id="e-slideToggle" class="element"><p id="p-slideToggle">Again, this works much better.<br>I can slide down <i>and</i> up! (click again)</p></div>
+            <div id="e-fadeIn" class="element"><p>Click .fadeIn and see how the next paragraph appears!</p><p id="p-fadeIn">I'm much nicer than <i>.show</i> in my opinion.</p></div>
+            <div id="e-fadeOut" class="element"><p id="p-fadeOut">And I fade out like a ghost... spooky.</p></div>
+            <div id="e-addClass" class="element"><p id="p-addClass">Transform me with CSS!!!</p></div>
+
+            <!-- MANIPULATION -->
+            <div id="e-before" class="element"><p id="p-before">You can add content before me.</p></div>
+            <div id="e-after" class="element"><p id="p-after">You can add content after me.</p></div>
+            <div id="e-append" class="element"><p id="p-append" class="callback">But what if you actually want to add text or even HTML markup <i>in</i> this paragraph?</p></div>
+            <div id="e-html" class="element"><p id="p-html" class="callback">And if you want to completely <i>replace</i> an element's HTML markup, use the .html function.</p></div>
+            <div id="e-text" class="element"><p id="p-text" class="callback">.text is used to set (e.g. update) a new text value for a matched element.</p></div>
+            <div id="e-data" class="element"><p>.data allows you to call data stored with associated elements. Click to see data stored in the 'body' tag:</p><p id="p-data" class="callback"></p></div>
+            <div id="e-val" class="element"><p>.val allows you to get values of form elements.<br>Input text and click .val to see its value below: </p><textarea id="i-val" rows="3" cols="30"></textarea><p id="p-val" class="callback"></p></div>
+            <div id="e-attr" class="element"><p>.attr allows you to view the value of an element's attribute. This paragraph's id will be appended below (click again):</p><p id="p-attr" class="callback">Paragraph ID: </p></div>
+
+        </div>
     </div>
-</div>
-
 </body>
 </html>

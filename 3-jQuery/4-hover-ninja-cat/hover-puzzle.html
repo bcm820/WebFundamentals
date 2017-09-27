@@ -6,12 +6,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
-	      $('img').click(function(){
-			$(this).attr('temp', $(this).attr('src'));
-			$(this).attr('src', $(this).attr('data-alt-src'));
-			$(this).attr('data-alt-src', $(this).attr('temp'));
-		  });
-		});		
+	        $('img').hover(
+                function(){
+			        $(this).attr('temp', $(this).attr('src'));
+			        $(this).attr('src', $(this).attr('data-alt-src'));
+                    $(this).attr('data-alt-src', $(this).attr('temp'));
+                },
+                function(){
+			        $(this).attr('temp', $(this).attr('src'));
+			        $(this).attr('src', $(this).attr('data-alt-src'));
+                    $(this).attr('data-alt-src', $(this).attr('temp'));
+            });
+        });
         </script>
 </head>
 <body>
