@@ -49,17 +49,6 @@ p{
     height: 1500px;
 }
 
-#flag{
-    position: fixed;
-    display: inline-block;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    width: 220px;
-    height: 260px;
-    padding: 10px;
-    margin-left: 40px;
-}
-
 #logo{
     position: absolute;
     background-image: url("got-logo.png");
@@ -81,6 +70,17 @@ p{
     margin-left: 20px;
     bottom: 20px;
     padding: 20px;
+}
+
+#flag{
+    position: fixed;
+    display: inline-block;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 220px;
+    height: 260px;
+    padding: 10px;
+    margin-left: 40px;
 }
 
 .sigil{

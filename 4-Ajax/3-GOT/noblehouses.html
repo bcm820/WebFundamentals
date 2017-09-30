@@ -10,39 +10,7 @@
         <link rel=stylesheet href=noblehouses.css>
         <script src=https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js></script>
         <script>
-            
-            function attach(){
-                $('.icon').click(function(){
-                    var id = $(this).attr('id');
-                    $.get(`https://anapioficeandfire.com/api/houses/${id}`, function(res){
-                        var titles = res.titles[0]
-                        for (var i = 1; i < res.titles.length; i++) {
-                            titles += ", " + res.titles[i]
-                        }
-                        var house = `<h1>${res.name}</h1>`
-                            house += `<h2>Region</h2>`
-                            house += `<p>${res.region}</p>`
-                            house += `<h2>Coat of Arms</h2>`
-                            house += `<p>${res.coatOfArms}</p>`
-                            house += `<h2>Title of Leader</h2>`
-                            house += `<p>${titles}</p>`
-                            house += `<h2>Words</h2>`
-                            house += `<p>${res.words}</p>`
-                        $('#info').html(house);
-                    }, 'json');
-                    $('#flag').slideUp();
-                    $('#flag').css('background-image', `url("banners/banner-${this.id}.png")`);
-                    $('#flag').slideDown();
-                });
-            }
-            
             $(document).ready(function(){
-                
-                // Remove later on after research
-                // What info to pull: Name, region, 
-                $.get('https://www.anapioficeandfire.com/api/houses/362', function(res) {
-                    console.log(res);
-                });
 
                 // When the document loads, hide flag div
                 $('#flag').hide();
@@ -84,9 +52,8 @@
         <div id=info>
             <h1>The Noble Houses<br>
                 of Westeros</h1>
-            <p>Makes me a … scientist. I'm a sociopath; there's not much he can do for me. Finding a needle in a haystack isn't hard when every straw is computerized. Finding a needle in a haystack isn't hard when every straw is computerized.
-                    
-                    He taught me a code. To survive. You're a killer. I catch killers. I've lived in darkness a long time. Over the years my eyes adjusted until the dark became my world and I could see. Only you could make those words cute.</p>
+            <h2>Click the icons to the left to view info on each noble house in Westeros.</h2>
+            <h2>Which house will claim the Iron Throne?</h2>
         </div>
     </body>
 </html>
